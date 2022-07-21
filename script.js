@@ -88,3 +88,36 @@ const questions = [
     answer: "7",
   },
 ];
+const questionsSection = document.querySelector(".questions-section");
+
+function randomQuestion() {
+  const randomNum = parseInt(Math.random() * (questions.length - 1));
+  console.log(randomNum);
+  const div = generatorQuestion(questions[randomNum]);
+  questionsSection.appendChild(div);
+  console.log(div);
+}
+
+function generatorQuestion(obj) {
+  const div = document.createElement("div");
+  const question = document.createElement("p");
+
+  question.textContent = obj.question;
+  questionsSection.appendChild(question);
+
+  obj.choices.forEach((e) => {
+    const wrapper = document.createElement("div");
+    const radio = document.createElement("input");
+    const label = document.createElement("label");
+    radio.setAttribute("type", "radio");
+    radio.setAttribute("value", e);
+    radio.setAttribute("name", "answer");
+    label.textContent = e;
+    wrapper.appendChild(radio);
+    wrapper.appendChild(label);
+    div.appendChild(wrapper);
+  });
+
+  return div;
+}
+randomQuestion();

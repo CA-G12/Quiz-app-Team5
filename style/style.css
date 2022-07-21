@@ -63,6 +63,7 @@ main.container {
 }
 .questions-section div {
   margin-left: 2rem;
+  height: 25px;
 }
 .overlay {
   width: 100%;
