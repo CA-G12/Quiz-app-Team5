@@ -8,6 +8,7 @@
   --main-font : system-ui;
   --main-btn-color : #fff;
   --main-btn-backgroung-color : linear-gradient(to right, #5f2c82 0%, #49a09d 51%, #5f2c82 100%);  /* use background-image: */
+  --text-color: #464c54; 
 }
 body {
   background-color: #d9afd9;
@@ -27,6 +28,7 @@ main.container {
   background: #fff ;
   border-radius: 10px;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  color: var(--text-color);
 
 }
 /* ----------- End Global Style  ----------- */
