@@ -7,12 +7,13 @@
   --main-color: #ff686d;
   --main-font: system-ui;
   --main-btn-color: #fff;
-  --main-btn-backgroung-color: linear-gradient(
+  --main-btn-background-color: linear-gradient(
     to right,
     #5f2c82 0%,
     #49a09d 51%,
     #5f2c82 100%
-  ); /* use background-image: */
+  );
+  /* use background-image: */
   --text-color: #464c54;
 }
 body {
@@ -33,8 +34,74 @@ main.container {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
-  color: var(--text-color);
 }
+/* ----------- End Global Style  ----------- */
+
+/* ------------- Start Game Page Style ------------- */
+.root {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user-section {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.questions-section {
+  width: 100%;
+  padding: 0 2rem;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.questions-section div {
+  margin-left: 2rem;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(143, 139, 139, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(5px);
+}
+.popup {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eaebc8;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.popup input {
+  outline: none;
+  padding: 5px 10px;
+  height: 2rem;
+  border-radius: 5px;
+}
+.start-btn {
+  padding: 0.2rem 2rem;
+}
+.hide {
+  display: none;
+}
+/* ------------- End Game Page Style ------------- */
+
 /* ----------- End Global Style  ----------- */
 
 /* ----------- Start Home Page  ----------- */
@@ -61,7 +128,7 @@ main.container {
   border-radius: 5px;
 }
 .btn {
-  background-image: var(--main-btn-backgroung-color);
+  background-image: var(--main-btn-background-color);
   color: var(--main-btn-color);
 }
 
@@ -69,9 +136,9 @@ main.container {
 
 /* ------------- Start Result Page Style ------------- */
 
-.res-page-container{
+.res-page-container {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   justify-content: space-around;
 }
 .result {
