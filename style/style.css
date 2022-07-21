@@ -69,8 +69,6 @@ main.container {
 
 /* ------------- Start Result Page Style ------------- */
 
-<<<<<<< HEAD
-=======
 .res-page-container{
   display: flex;
   flex-direction: column ;
@@ -126,5 +124,4 @@ th {
 tr:nth-child(even) {
   background-color: #dee1f3;
 }
->>>>>>> 69823d8939ba98179a55dea6e9dd7c5883fa734f
 /* ------------- End Result Page Style ------------- */
