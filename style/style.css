@@ -39,5 +39,21 @@ main.container {
 
 
 /* ------------- Start Result Page Style ------------- */
+.res-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
+.leaderboard {
+  width: 95%;
+}
+
+.result {
+  width: 95%;
+}
+.table-caption {
+  display: flex;
+}
 /* ------------- End Result Page Style ------------- */
