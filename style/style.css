@@ -5,10 +5,15 @@
 }
 :root {
   --main-color: #ff686d;
-  --main-font : system-ui;
-  --main-btn-color : #fff;
-  --main-btn-backgroung-color : linear-gradient(to right, #5f2c82 0%, #49a09d 51%, #5f2c82 100%);  /* use background-image: */
-  --text-color: #464c54; 
+  --main-font: system-ui;
+  --main-btn-color: #fff;
+  --main-btn-backgroung-color: linear-gradient(
+    to right,
+    #5f2c82 0%,
+    #49a09d 51%,
+    #5f2c82 100%
+  ); /* use background-image: */
+  --text-color: #464c54;
 }
 body {
   background-color: #d9afd9;
@@ -16,20 +21,19 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   font-family: var(--main-font);
 }
 
 /* ----------- Start  Global Style  ----------- */
 
 main.container {
-  width : 50rem;
-  height : 37.5rem;
-  background: #fff ;
+  width: 50rem;
+  height: 37.5rem;
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
   color: var(--text-color);
-
 }
 /* ----------- End Global Style  ----------- */
 
@@ -39,7 +43,7 @@ main.container {
   padding: 50px 10px 25px 10px;
 }
 .lists-home-page {
-  margin : 60px;
+  margin: 60px;
 }
 .lists-home-page ul li {
   margin: 30px;
@@ -63,17 +67,61 @@ main.container {
 
 /* ----------- End Home Page  ----------- */
 
-
-
-
-
-
-
-
-
-
-
-
 /* ------------- Start Result Page Style ------------- */
 
+.res-page-container{
+  display: flex;
+  flex-direction: column ;
+  justify-content: space-around;
+}
+.result {
+  width: 95%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 8rem;
+  justify-content: space-between;
+}
+.result h1 {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+.user-score {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.leaderboard {
+  width: 95%;
+}
+
+.table-caption {
+  display: flex;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 16rem;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #f2f2f2;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+  width: 15rem;
+  font-size: 1.2rem;
+}
+
+tr:nth-child(even) {
+  background-color: #dee1f3;
+}
 /* ------------- End Result Page Style ------------- */
