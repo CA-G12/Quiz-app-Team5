@@ -88,3 +88,22 @@ const questions = [
     answer: "7",
   },
 ];
+
+// -----------------------  Start About Start Event -----------------------
+const popUp = document.querySelector(".overlay");
+const startButton = document.querySelector(".start-btn");
+const inputName = document.querySelector('.name');
+const playerNameDiv = document.querySelector('.player-name');
+
+function startEvent() {
+    startButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        popUp.classList.add("hide");
+        playerNameDiv.textContent="player name : "+ inputName.value;
+        window.localStorage.setItem('name' , inputName.value); 
+
+});
+}
+startEvent();
+
+// -----------------------  End About Start Event -----------------------
