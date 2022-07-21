@@ -26,7 +26,68 @@ main.container {
 /* ----------- End Global Style  ----------- */
 
 /* ------------- Start Game Page Style ------------- */
-
+.root {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user-section {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.questions-section {
+  width: 100%;
+  padding: 0 2rem;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.questions-section div {
+  margin-left: 2rem;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(143, 139, 139, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(5px);
+}
+.popup {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eaebc8;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.popup input {
+  outline: none;
+  padding: 5px 10px;
+  height: 2rem;
+  border-radius: 5px;
+}
+.start-btn {
+  padding: 0.2rem 2rem;
+}
+.hide {
+  display: none;
+}
 /* ------------- End Game Page Style ------------- */
 
 /* ------------- Start Result Page Style ------------- */
