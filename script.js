@@ -3,11 +3,13 @@ const questions = [
     question: "+true; '!Lydia'",
     choices: ["1 and false", "false and NaN", "false and false"],
     answer: "1 and false",
+    isAnswered: false,
   },
   {
     question: "const sum = eval('10*10+5');",
     choices: ["105", "TypeError", "10*10+5"],
     answer: "105",
+    isAnswered: false,
   },
   {
     question:
@@ -19,11 +21,13 @@ const questions = [
       "When the user shuts off their computer.",
     ],
     answer: "When the user closes the tab.",
+    isAnswered: false,
   },
   {
     question: "var num = 8; var num = 10; console.log(num);",
     choices: ["8", "10", "SyntaxError", "ReferenceError"],
     answer: "10",
+    isAnswered: false,
   },
   {
     question:
@@ -35,17 +39,20 @@ const questions = [
       "SyntaxError",
     ],
     answer: '{ a: "three", b: "two" }',
+    isAnswered: false,
   },
   {
     question:
       'The JavaScript global execution context creates two things for you: the global object, and the "this" keyword.',
     choices: ["true", "false", "it depends"],
     answer: "true",
+    isAnswered: false,
   },
   {
     question: "console.log(typeof typeof 1);",
     choices: ["number", "string", "object", "undefined"],
     answer: "string",
+    isAnswered: false,
   },
   {
     question: "Everything in JavaScript is either a...",
@@ -56,6 +63,7 @@ const questions = [
       "number or object",
     ],
     answer: "primitive or object",
+    isAnswered: false,
   },
   {
     question: "!!null; !!''; !!1;",
@@ -66,6 +74,7 @@ const questions = [
       "true true false",
     ],
     answer: "false false true",
+    isAnswered: false,
   },
   {
     question: "What does this return? [...'Lydia'];",
@@ -76,15 +85,18 @@ const questions = [
       '[["L", "y", "d", "i", "a"]]',
     ],
     answer: '["L", "y", "d", "i", "a"]',
+    isAnswered: false,
   },
   {
     question: "console.log(3 + 4 + '5');",
     choices: ['"345"', "75", "12", '"12"'],
     answer: "75",
+    isAnswered: false,
   },
   {
     question: "const num = parseInt('7*6', 10);",
     choices: ["42", '"42', "7", "NaN"],
     answer: "7",
+    isAnswered: false,
   },
 ];
