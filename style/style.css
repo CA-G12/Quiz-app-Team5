@@ -5,7 +5,10 @@
 }
 :root {
   --main-color: #ff686d;
-  --text-color: #464c54;
+  --main-font : system-ui;
+  --main-btn-color : #fff;
+  --main-btn-backgroung-color : linear-gradient(to right, #5f2c82 0%, #49a09d 51%, #5f2c82 100%);  /* use background-image: */
+  --text-color: #464c54; 
 }
 body {
   background-color: #d9afd9;
@@ -13,27 +16,64 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center ;
+  font-family: var(--main-font);
 }
 
 /* ----------- Start  Global Style  ----------- */
+
 main.container {
-  width: 50rem;
-  height: 37.5rem;
-  background: #fff;
+  width : 50rem;
+  height : 37.5rem;
+  background: #fff ;
   border-radius: 10px;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  color: var(--text-color);
+
 }
 /* ----------- End Global Style  ----------- */
 
-/* ------------- Start Result Page Style ------------- */
-.res-page-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 1.25rem 1.25rem;
+/* ----------- Start Home Page  ----------- */
+.home-page h1 {
+  text-align: center;
+  padding: 50px 10px 25px 10px;
 }
+.lists-home-page {
+  margin : 60px;
+}
+.lists-home-page ul li {
+  margin: 30px;
+}
+.lists-home-page ul li p {
+  padding: 10px 5px;
+}
+.btn-home-page {
+  display: flex;
+  justify-content: center;
+}
+.btn-home-page a {
+  text-decoration: none;
+  padding: 12px 40px;
+  border-radius: 5px;
+}
+.btn {
+  background-image: var(--main-btn-backgroung-color);
+  color: var(--main-btn-color);
+}
+/* ----------- End Home Page  ----------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- Start Result Page Style ------------- */
 
 .result {
   width: 95%;
@@ -85,5 +125,4 @@ th {
 tr:nth-child(even) {
   background-color: #dee1f3;
 }
-
 /* ------------- End Result Page Style ------------- */
