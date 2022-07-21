@@ -11,17 +11,22 @@
     <main class="container">
       <section class="root">
         <div class="user-section">
-          <p>player name</p>
+          <p class="player-name">player name</p>
           <p>player score</p>
         </div>
         <div class="questions-section"></div>
         <button class="btn">Next question</button>
       </section>
     </main>
-    <div class="overlay hide">
+    <div class="overlay">
       <section class="popup">
         <form action="">
-          <input type="text" placeholder="Enter your name" />
+          <input
+            type="text"
+            placeholder="Enter your name"
+            class="name"
+            required
+          />
           <button class="start-btn" type="submit">Start</button>
         </form>
       </section>
