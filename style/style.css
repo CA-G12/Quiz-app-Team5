@@ -4,18 +4,16 @@
   box-sizing: border-box;
 }
 :root {
-<<<<<<< HEAD
-=======
   --main-color: #ff686d;
   --main-font: system-ui;
   --main-btn-color: #fff;
-  --main-btn-backgroung-color: linear-gradient(
+  --main-btn-background-color: linear-gradient(
     to right,
     #5f2c82 0%,
     #49a09d 51%,
     #5f2c82 100%
-  ); /* use background-image: */
->>>>>>> e85f2ffd7583edc287c247f09d8d2d07fd72dcec
+  );
+  /* use background-image: */
   --text-color: #464c54;
 }
 body {
@@ -25,10 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
-=======
   font-family: var(--main-font);
->>>>>>> e85f2ffd7583edc287c247f09d8d2d07fd72dcec
 }
 
 /* ----------- Start  Global Style  ----------- */
@@ -39,7 +34,6 @@ main.container {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
-<<<<<<< HEAD
 }
 /* ----------- End Global Style  ----------- */
 
@@ -108,11 +102,6 @@ main.container {
 }
 /* ------------- End Game Page Style ------------- */
 
-/* ------------- Start Result Page Style ------------- */
-
-=======
-  color: var(--text-color);
-}
 /* ----------- End Global Style  ----------- */
 
 /* ----------- Start Home Page  ----------- */
@@ -139,7 +128,7 @@ main.container {
   border-radius: 5px;
 }
 .btn {
-  background-image: var(--main-btn-backgroung-color);
+  background-image: var(--main-btn-background-color);
   color: var(--main-btn-color);
 }
 
@@ -147,9 +136,9 @@ main.container {
 
 /* ------------- Start Result Page Style ------------- */
 
-.res-page-container{
+.res-page-container {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   justify-content: space-around;
 }
 .result {
@@ -202,5 +191,4 @@ th {
 tr:nth-child(even) {
   background-color: #dee1f3;
 }
->>>>>>> e85f2ffd7583edc287c247f09d8d2d07fd72dcec
 /* ------------- End Result Page Style ------------- */
