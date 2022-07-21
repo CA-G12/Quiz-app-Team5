@@ -63,6 +63,7 @@ main.container {
 }
 .questions-section div {
   margin-left: 2rem;
+  height: 25px;
 }
   button.btn {
   max-width: 269px;
