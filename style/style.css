@@ -34,6 +34,9 @@ main.container {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* ----------- End Global Style  ----------- */
 
@@ -65,7 +68,7 @@ main.container {
   margin-left: 2rem;
   height: 25px;
 }
-  button.btn {
+button.btn {
   max-width: 269px;
   margin: 0 auto;
   padding: 13px 30px;
@@ -107,8 +110,17 @@ main.container {
 .start-btn {
   padding: 0.2rem 2rem;
   border-radius: 5px;
-  border: 1px solid #a9a4a4; 
+  border: 1px solid #a9a4a4;
 }
+.show-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+}
+
 .hide {
   display: none;
 }
