@@ -89,19 +89,19 @@ const questions = [
   },
 ];
 const questionsSection = document.querySelector(".questions-section");
+//? This function is responsible for generating a random question
 
 function randomQuestion() {
   const randomNum = parseInt(Math.random() * (questions.length - 1));
-  console.log(randomNum);
   const div = generatorQuestion(questions[randomNum]);
   questionsSection.appendChild(div);
-  console.log(div);
 }
+
+//? This function is responsible for creating an html elements
 
 function generatorQuestion(obj) {
   const div = document.createElement("div");
   const question = document.createElement("p");
-
   question.textContent = obj.question;
   questionsSection.appendChild(question);
 
@@ -112,6 +112,7 @@ function generatorQuestion(obj) {
     radio.setAttribute("type", "radio");
     radio.setAttribute("value", e);
     radio.setAttribute("name", "answer");
+    radio.setAttribute("choice", "");
     label.textContent = e;
     wrapper.appendChild(radio);
     wrapper.appendChild(label);
@@ -120,7 +121,42 @@ function generatorQuestion(obj) {
 
   return div;
 }
-randomQuestion();
+
+// adding click event on the next button to let the user generate a question
+
+const progress = document.querySelector(".progress");
+const resultSection = document.querySelector(".show-score");
+const root = document.querySelector(".root");
+
+let counter = 1;
+const nextQuestionBtn = document.querySelector(".btn");
+
+let correctAnswer = 0;
+nextQuestionBtn.addEventListener("click", () => {
+  //! check the correct answer
+  const choices = document.querySelectorAll("[choice]");
+  choices.forEach((e) => {
+    if (e.checked) {
+      if (`${e.value}` === questions[counter - 1].answer) {
+        correctAnswer++;
+      }
+    }
+  });
+
+  //! generate new question
+  questionsSection.textContent = "";
+  if (counter <= questions.length - 1) {
+    progress.textContent = `${counter + 1} / ${questions.length}`;
+
+    questionsSection.appendChild(generatorQuestion(questions[counter]));
+    counter++;
+  } else {
+    const playerScore = document.querySelector(".player-score");
+    playerScore.textContent = ` your score is ${correctAnswer} / ${questions.length}`;
+    root.classList.add("hide");
+    resultSection.classList.remove("hide");
+  }
+});
 
 // -----------------------  Start About Start Event -----------------------
 const popUp = document.querySelector(".overlay");
@@ -135,6 +171,10 @@ function startEvent() {
     playerNameDiv.textContent = "player name : " + inputName.value;
     window.localStorage.setItem("name", inputName.value);
   });
+  //! show the first question
+  progress.textContent = `1 / ${questions.length}`;
+  const div = generatorQuestion(questions[0]);
+  questionsSection.appendChild(div);
 }
 startEvent();
 
